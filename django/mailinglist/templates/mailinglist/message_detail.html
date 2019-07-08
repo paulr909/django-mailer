@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load markdownify %}
+
+{% block title %}
+    {{ message.subject }}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+            <h1>{{ message.subject }}</h1>
+            <div>
+                {{ message.body|markdownify }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

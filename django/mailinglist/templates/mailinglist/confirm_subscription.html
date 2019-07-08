@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<div class="row">
+    <div class="col-md-6">
+        {% block title %}
+            Subscription to {{ subscriber.mailing_list }} confirmed.
+        {% endblock %}
+
+        {% block body %}
+            <h1>Subscription to {{ subscriber.mailing_list }} confirmed!</h1>
+        {% endblock %}
+    </div>
+</div>
