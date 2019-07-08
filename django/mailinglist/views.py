@@ -148,7 +148,7 @@ class MailingListCreateListView(generics.ListCreateAPIView):
         return super().get_serializer(*args, **kwargs)
 
 
-class MailingListRetrieveUpdateDetroyView(generics.RetrieveUpdateDestroyAPIView):
+class MailingListRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated, IsOwnerPermission)
     serializer_class = MailingListSerializer
     queryset = MailingList.objects.all()
