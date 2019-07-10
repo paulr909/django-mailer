@@ -31,4 +31,4 @@ Test email:
 from django.core.mail import send_mail
 
 send_mail('Testing', 'Testing message, can you hear me...', 'your-email@mail.com', ['test@gmail.com', 'test@mail.com'])
-`
+```
