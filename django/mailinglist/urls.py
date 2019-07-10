@@ -10,7 +10,7 @@ urlpatterns = [
     path('<uuid:pk>/manage', views.MailingListDetailView.as_view(), name='manage_mailinglist'),
 
     path('<uuid:mailinglist_id>/subscribe', views.SubscribeToMailingListView.as_view(), name='subscribe'),
-    path('<uuid:pk>/thankyou', views.ThankYouForSubscribingView.as_view(), name='subscriber_thank_you'),
+    path('<uuid:pk>/thankyou', views.ThankYouForSubscribingView.as_view(), name='subscriber_thankyou'),
     path('subscribe/confirmation/<uuid:pk>', views.ConfirmSubscriptionView.as_view(), name='confirm_subscription'),
     path('unsubscribe/<uuid:pk>', views.UnsubscribeView.as_view(), name='unsubscribe'),
 
