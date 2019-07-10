@@ -22,7 +22,7 @@ class SubscribeToMailingListView(CreateView):
         }
 
     def get_success_url(self):
-        return reverse('mailinglist:subscriber_thankyou', kwargs={
+        return reverse('mailinglist:subscriber_thank_you', kwargs={
             'pk': self.object.mailing_list.id,
         })
 
