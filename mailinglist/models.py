@@ -49,6 +49,9 @@ class Subscriber(models.Model):
     def send_confirmation_email(self):
         tasks.send_confirmation_email_to_subscriber.delay(self.id)
 
+    def __str__(self):
+        return self.email
+
 
 class Message(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -63,6 +66,9 @@ class Message(models.Model):
         super().save(force_insert=force_insert, force_update=force_update, using=using, update_fields=update_fields)
         if is_new:
             tasks.build_subscriber_messages_for_message.delay(self.id)
+
+    def __str__(self):
+        return self.subject
 
 
 class SubscriberMessageManager(models.Manager):

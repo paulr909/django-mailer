@@ -123,17 +123,21 @@ LOGIN_URL = 'user:login'
 LOGIN_REDIRECT_URL = 'mailinglist:mailinglist_list'
 LOGOUT_REDIRECT_URL = 'user:login'
 
-MAILING_LIST_FROM_EMAIL = 'test@mailer.com'
-MAILING_LIST_LINK_DOMAIN = 'http://localhost'
+MAILING_LIST_FROM_EMAIL = 'your-email@gmail.com'
+MAILING_LIST_LINK_DOMAIN = 'http://localhost:8000'
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'django-db'
 
-EMAIL_HOST = 'smtp.example.com'
-EMAIL_HOST_USER = 'username'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'your-email@gmail.com'
+EMAIL_HOST_PASSWORD = 'xxxxxxxxxxxxxxxxxxx'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# testing below
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (

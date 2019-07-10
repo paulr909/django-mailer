@@ -18,3 +18,9 @@ Run the development server:
 ```bash
 python manage.py runserver
 ```
+
+Run Celery:
+
+```bash
+celery worker -A project.celery -l info
+```
