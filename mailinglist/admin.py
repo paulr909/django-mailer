@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from mailinglist.models import Message, MailingList, Subscriber
+from mailinglist.models import MailingList, Message, Subscriber
 
 admin.site.register(Message)
 admin.site.register(MailingList)

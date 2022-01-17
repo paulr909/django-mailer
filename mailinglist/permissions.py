@@ -1,9 +1,10 @@
 from rest_framework.permissions import BasePermission
-from mailinglist.models import Subscriber, MailingList
+
+from mailinglist.models import MailingList, Subscriber
 
 
 class IsOwnerPermission(BasePermission):
-    message = 'User does not have access to this resource.'
+    message = "User does not have access to this resource."
 
     def has_object_permission(self, request, view, obj):
         user = request.user
