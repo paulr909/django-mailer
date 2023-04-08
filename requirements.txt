@@ -1,6 +1,6 @@
 amqp==5.1.1
 asgiref==3.6.0
-billiard==4.0.0
+billiard==3.6.0
 black==23.3.0
 bleach==6.0.0
 celery==5.2.7
