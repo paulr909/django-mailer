@@ -2,9 +2,9 @@ import factory
 from django.conf import settings
 
 
-class UserFactory(factory.DjangoModelFactory):
-    username = factory.Sequence(lambda n: 'user %d' % n)
-    password = 'unittest'
+class UserFactory(factory.django.DjangoModelFactory):
+    username = factory.Sequence(lambda n: "user %d" % n)
+    password = "unittest"
 
     class Meta:
         model = settings.AUTH_USER_MODEL

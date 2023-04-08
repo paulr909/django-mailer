@@ -5,7 +5,7 @@ import factory
 from mailinglist.models import Subscriber
 
 
-class SubscriberFactory(factory.DjangoModelFactory):
+class SubscriberFactory(factory.django.DjangoModelFactory):
     email = factory.Sequence(lambda n: "foo.%d@example.com" % n)
 
     class Meta:
